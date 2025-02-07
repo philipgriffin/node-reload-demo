@@ -1,0 +1,19 @@
+{
+  "name": "sample",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/sample/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/sample",
+        "main": "libs/sample/src/index.ts",
+        "tsConfig": "libs/sample/tsconfig.lib.json",
+        "assets": ["libs/sample/*.md"]
+      }
+    }
+  }
+}
